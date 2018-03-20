@@ -3,9 +3,9 @@
 
 
 /**
- * Cours
+ * Matiere
  */
-class Cours
+class Matiere
 {
     /**
      * @var int
@@ -38,7 +38,7 @@ class Cours
      *
      * @param string $intitule
      *
-     * @return Cours
+     * @return Matiere
      */
     public function setIntitule($intitule)
     {
@@ -62,7 +62,7 @@ class Cours
      *
      * @param \Prof|null $idProf
      *
-     * @return Cours
+     * @return Matiere
      */
     public function setIdProf(\Prof $idProf = null)
     {

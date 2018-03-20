@@ -5,9 +5,9 @@ Session:
         id_salle:
             columns:
                 - id_salle
-        id_cours:
+        id_matiere:
             columns:
-                - id_cours
+                - id_matiere
     id:
         id:
             type: integer
@@ -37,14 +37,14 @@ Session:
                 id_salle:
                     referencedColumnName: id
             orphanRemoval: false
-        idCours:
-            targetEntity: Cours
+        idMatiere:
+            targetEntity: Matiere
             cascade: {  }
             fetch: LAZY
             mappedBy: null
             inversedBy: null
             joinColumns:
-                id_cours:
+                id_matiere:
                     referencedColumnName: id
             orphanRemoval: false
     manyToMany:

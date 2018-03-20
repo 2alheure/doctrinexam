@@ -1,6 +1,6 @@
-Cours:
+Matiere:
     type: entity
-    table: cours
+    table: matiere
     indexes:
         id_prof:
             columns:

@@ -28,9 +28,9 @@ class Session
     private $idSalle;
 
     /**
-     * @var \Cours
+     * @var \Matiere
      */
-    private $idCours;
+    private $idMatiere;
 
     /**
      * @var \Doctrine\Common\Collections\Collection
@@ -128,27 +128,27 @@ class Session
     }
 
     /**
-     * Set idCours.
+     * Set idMatiere.
      *
-     * @param \Cours|null $idCours
+     * @param \Matiere|null $idMatiere
      *
      * @return Session
      */
-    public function setIdCours(\Cours $idCours = null)
+    public function setIdMatiere(\Matiere $idMatiere = null)
     {
-        $this->idCours = $idCours;
+        $this->idMatiere = $idMatiere;
 
         return $this;
     }
 
     /**
-     * Get idCours.
+     * Get idMatiere.
      *
-     * @return \Cours|null
+     * @return \Matiere|null
      */
-    public function getIdCours()
+    public function getIdMatiere()
     {
-        return $this->idCours;
+        return $this->idMatiere;
     }
 
     /**

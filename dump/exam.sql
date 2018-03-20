@@ -69,11 +69,11 @@ CREATE TABLE IF NOT EXISTS `prof` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `cours`
+-- Structure de la table `matiere`
 --
 
-DROP TABLE IF EXISTS `cours`;
-CREATE TABLE IF NOT EXISTS `cours` (
+DROP TABLE IF EXISTS `matiere`;
+CREATE TABLE IF NOT EXISTS `matiere` (
   `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   `intitule` varchar(255) COLLATE utf8_bin NOT NULL,
   `id_prof` int(10) UNSIGNED NOT NULL,
@@ -109,10 +109,10 @@ CREATE TABLE IF NOT EXISTS `session` (
   `debut` timestamp NOT NULL,
   `duree` float NOT NULL,
   `id_salle` int(10) UNSIGNED NOT NULL,
-  `id_cours` int(10) UNSIGNED NOT NULL,
+  `id_matiere` int(10) UNSIGNED NOT NULL,
   PRIMARY KEY (`id`),
   FOREIGN KEY (`id_salle`) REFERENCES `salle`(`id`),
-  FOREIGN KEY (`id_cours`) REFERENCES `cours`(`id`)
+  FOREIGN KEY (`id_matiere`) REFERENCES `matiere`(`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 COMMIT;
 
