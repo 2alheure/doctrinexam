@@ -2,10 +2,18 @@
 
 require_once('../bootstrap.php');
 
-$idSalary = 1;
+$idSalary = $_GET['id'];
 $salary = $entityManager->find('\Employe', $idSalary);
 
 $sessions = $entityManager->getRepository('\Assister')->findBy(array('idEmploye' => $salary));
+
+$notes = '';
+
+foreach($sessions as $session) {
+    $notes += $session->getNote();
+}
+
+$moyenne = $notes / sizeof($sessions);
 
 ?>
 
@@ -24,6 +32,8 @@ $sessions = $entityManager->getRepository('\Assister')->findBy(array('idEmploye'
     <div class="container">
         <div class="row">
             <div class="col-md-12">
+            
+                La moyenne de ce salarié est <b><?php echo $moyenne; ?></b>
                 <table>
                     <thead>
                         <tr>
