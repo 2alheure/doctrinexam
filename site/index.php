@@ -12,7 +12,7 @@
         <ul>
             <li><a href="setup.php">Générer des données dans la base.</a></li>
             <li></li>
-            <li>Toutes les sessions d'un salarié</li>
+            <li><a href="salarySession.php">Toutes les sessions d'un salarié</a></li>
             <li>Moyenne des notes d'un salarié</li>
             <li>Lister les différentes configurations existantes d'une session avec, pour chacune, le nom du prof ayant créé cette configuration.</li>
             <li>Lister les salles dans lesquelles ont lieu toutes les sessions d'un même cours.</li>
