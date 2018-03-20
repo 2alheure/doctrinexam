@@ -26,5 +26,5 @@ Salle:
             type: smallint
             nullable: false
             options:
-                unsigned: false
+                unsigned: true
     lifecycleCallbacks: {  }

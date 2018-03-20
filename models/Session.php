@@ -32,18 +32,6 @@ class Session
      */
     private $idMatiere;
 
-    /**
-     * @var \Doctrine\Common\Collections\Collection
-     */
-    private $idProf;
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->idProf = new \Doctrine\Common\Collections\ArrayCollection();
-    }
 
     /**
      * Get id
@@ -149,40 +137,6 @@ class Session
     public function getIdMatiere()
     {
         return $this->idMatiere;
-    }
-
-    /**
-     * Add idProf
-     *
-     * @param \Prof $idProf
-     *
-     * @return Session
-     */
-    public function addIdProf(\Prof $idProf)
-    {
-        $this->idProf[] = $idProf;
-
-        return $this;
-    }
-
-    /**
-     * Remove idProf
-     *
-     * @param \Prof $idProf
-     */
-    public function removeIdProf(\Prof $idProf)
-    {
-        $this->idProf->removeElement($idProf);
-    }
-
-    /**
-     * Get idProf
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getIdProf()
-    {
-        return $this->idProf;
     }
 }
 
