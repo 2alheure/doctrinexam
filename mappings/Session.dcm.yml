@@ -1,0 +1,59 @@
+Session:
+    type: entity
+    table: session
+    indexes:
+        id_salle:
+            columns:
+                - id_salle
+        id_cours:
+            columns:
+                - id_cours
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: true
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        debut:
+            type: datetime
+            nullable: false
+        duree:
+            type: float
+            nullable: false
+            precision: 10
+            scale: 0
+    manyToOne:
+        idSalle:
+            targetEntity: Salle
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                id_salle:
+                    referencedColumnName: id
+            orphanRemoval: false
+        idCours:
+            targetEntity: Cours
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                id_cours:
+                    referencedColumnName: id
+            orphanRemoval: false
+    manyToMany:
+        idProf:
+            targetEntity: Prof
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: idSession
+            inversedBy: null
+            joinTable: null
+            orderBy: null
+    lifecycleCallbacks: {  }
