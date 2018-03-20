@@ -2,7 +2,8 @@
     "name": "user/final_exam",
     "require": {
         "doctrine/orm": "^2.5",
-        "symfony/yaml": "^3.4"
+        "symfony/yaml": "^3.4",
+        "fzaninotto/faker": "^1.7"
     },
     "autoload": {
     "psr-0": {
