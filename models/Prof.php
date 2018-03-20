@@ -8,7 +8,7 @@
 class Prof
 {
     /**
-     * @var int
+     * @var integer
      */
     private $id;
 
@@ -36,9 +36,9 @@ class Prof
     }
 
     /**
-     * Get id.
+     * Get id
      *
-     * @return int
+     * @return integer
      */
     public function getId()
     {
@@ -46,7 +46,7 @@ class Prof
     }
 
     /**
-     * Set nom.
+     * Set nom
      *
      * @param string $nom
      *
@@ -60,7 +60,7 @@ class Prof
     }
 
     /**
-     * Get nom.
+     * Get nom
      *
      * @return string
      */
@@ -70,7 +70,7 @@ class Prof
     }
 
     /**
-     * Set prenom.
+     * Set prenom
      *
      * @param string $prenom
      *
@@ -84,7 +84,7 @@ class Prof
     }
 
     /**
-     * Get prenom.
+     * Get prenom
      *
      * @return string
      */
@@ -94,7 +94,7 @@ class Prof
     }
 
     /**
-     * Add idSession.
+     * Add idSession
      *
      * @param \Session $idSession
      *
@@ -108,19 +108,17 @@ class Prof
     }
 
     /**
-     * Remove idSession.
+     * Remove idSession
      *
      * @param \Session $idSession
-     *
-     * @return boolean TRUE if this collection contained the specified element, FALSE otherwise.
      */
     public function removeIdSession(\Session $idSession)
     {
-        return $this->idSession->removeElement($idSession);
+        $this->idSession->removeElement($idSession);
     }
 
     /**
-     * Get idSession.
+     * Get idSession
      *
      * @return \Doctrine\Common\Collections\Collection
      */
@@ -129,3 +127,4 @@ class Prof
         return $this->idSession;
     }
 }
+

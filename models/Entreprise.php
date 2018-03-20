@@ -8,7 +8,7 @@
 class Entreprise
 {
     /**
-     * @var int
+     * @var integer
      */
     private $id;
 
@@ -19,9 +19,9 @@ class Entreprise
 
 
     /**
-     * Get id.
+     * Get id
      *
-     * @return int
+     * @return integer
      */
     public function getId()
     {
@@ -29,7 +29,7 @@ class Entreprise
     }
 
     /**
-     * Set nom.
+     * Set nom
      *
      * @param string $nom
      *
@@ -43,7 +43,7 @@ class Entreprise
     }
 
     /**
-     * Get nom.
+     * Get nom
      *
      * @return string
      */
@@ -52,3 +52,4 @@ class Entreprise
         return $this->nom;
     }
 }
+

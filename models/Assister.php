@@ -8,7 +8,7 @@
 class Assister
 {
     /**
-     * @var int
+     * @var integer
      */
     private $id;
 
@@ -29,9 +29,9 @@ class Assister
 
 
     /**
-     * Get id.
+     * Get id
      *
-     * @return int
+     * @return integer
      */
     public function getId()
     {
@@ -39,7 +39,7 @@ class Assister
     }
 
     /**
-     * Set note.
+     * Set note
      *
      * @param float $note
      *
@@ -53,7 +53,7 @@ class Assister
     }
 
     /**
-     * Get note.
+     * Get note
      *
      * @return float
      */
@@ -63,9 +63,9 @@ class Assister
     }
 
     /**
-     * Set idEmploye.
+     * Set idEmploye
      *
-     * @param \Employe|null $idEmploye
+     * @param \Employe $idEmploye
      *
      * @return Assister
      */
@@ -77,9 +77,9 @@ class Assister
     }
 
     /**
-     * Get idEmploye.
+     * Get idEmploye
      *
-     * @return \Employe|null
+     * @return \Employe
      */
     public function getIdEmploye()
     {
@@ -87,9 +87,9 @@ class Assister
     }
 
     /**
-     * Set idSession.
+     * Set idSession
      *
-     * @param \Session|null $idSession
+     * @param \Session $idSession
      *
      * @return Assister
      */
@@ -101,12 +101,13 @@ class Assister
     }
 
     /**
-     * Get idSession.
+     * Get idSession
      *
-     * @return \Session|null
+     * @return \Session
      */
     public function getIdSession()
     {
         return $this->idSession;
     }
 }
+

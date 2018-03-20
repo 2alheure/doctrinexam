@@ -8,12 +8,12 @@
 class Salle
 {
     /**
-     * @var int
+     * @var integer
      */
     private $id;
 
     /**
-     * @var int
+     * @var integer
      */
     private $numero;
 
@@ -22,11 +22,16 @@ class Salle
      */
     private $lieu;
 
+    /**
+     * @var integer
+     */
+    private $places;
+
 
     /**
-     * Get id.
+     * Get id
      *
-     * @return int
+     * @return integer
      */
     public function getId()
     {
@@ -34,9 +39,9 @@ class Salle
     }
 
     /**
-     * Set numero.
+     * Set numero
      *
-     * @param int $numero
+     * @param integer $numero
      *
      * @return Salle
      */
@@ -48,9 +53,9 @@ class Salle
     }
 
     /**
-     * Get numero.
+     * Get numero
      *
-     * @return int
+     * @return integer
      */
     public function getNumero()
     {
@@ -58,7 +63,7 @@ class Salle
     }
 
     /**
-     * Set lieu.
+     * Set lieu
      *
      * @param string $lieu
      *
@@ -72,7 +77,7 @@ class Salle
     }
 
     /**
-     * Get lieu.
+     * Get lieu
      *
      * @return string
      */
@@ -80,4 +85,29 @@ class Salle
     {
         return $this->lieu;
     }
+
+    /**
+     * Set places
+     *
+     * @param integer $places
+     *
+     * @return Salle
+     */
+    public function setPlaces($places)
+    {
+        $this->places = $places;
+
+        return $this;
+    }
+
+    /**
+     * Get places
+     *
+     * @return integer
+     */
+    public function getPlaces()
+    {
+        return $this->places;
+    }
 }
+

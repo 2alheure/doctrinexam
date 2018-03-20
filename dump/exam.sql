@@ -34,9 +34,9 @@ USE `exam`;
 DROP TABLE IF EXISTS `salle`;
 CREATE TABLE IF NOT EXISTS `salle` (
   `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `numero` smallint(6) NOT NULL,
+  `numero` smallint(6) UNSIGNED NOT NULL,
   `lieu` varchar(255) COLLATE utf8_bin NOT NULL,
-  `places` smallint(6) NOT NULL,
+  `places` smallint(6) UNSIGNED NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
@@ -108,7 +108,7 @@ DROP TABLE IF EXISTS `session`;
 CREATE TABLE IF NOT EXISTS `session` (
   `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   `debut` timestamp NOT NULL,
-  `duree` float NOT NULL,
+  `duree` smallint(6) NOT NULL,
   `id_salle` int(10) UNSIGNED NOT NULL,
   `id_matiere` int(10) UNSIGNED NOT NULL,
   PRIMARY KEY (`id`),

@@ -22,10 +22,10 @@ Session:
             type: datetime
             nullable: false
         duree:
-            type: float
+            type: smallint
             nullable: false
-            precision: 10
-            scale: 0
+            options:
+                unsigned: false
     manyToOne:
         idSalle:
             targetEntity: Salle

@@ -8,7 +8,7 @@
 class Matiere
 {
     /**
-     * @var int
+     * @var integer
      */
     private $id;
 
@@ -24,9 +24,9 @@ class Matiere
 
 
     /**
-     * Get id.
+     * Get id
      *
-     * @return int
+     * @return integer
      */
     public function getId()
     {
@@ -34,7 +34,7 @@ class Matiere
     }
 
     /**
-     * Set intitule.
+     * Set intitule
      *
      * @param string $intitule
      *
@@ -48,7 +48,7 @@ class Matiere
     }
 
     /**
-     * Get intitule.
+     * Get intitule
      *
      * @return string
      */
@@ -58,9 +58,9 @@ class Matiere
     }
 
     /**
-     * Set idProf.
+     * Set idProf
      *
-     * @param \Prof|null $idProf
+     * @param \Prof $idProf
      *
      * @return Matiere
      */
@@ -72,12 +72,13 @@ class Matiere
     }
 
     /**
-     * Get idProf.
+     * Get idProf
      *
-     * @return \Prof|null
+     * @return \Prof
      */
     public function getIdProf()
     {
         return $this->idProf;
     }
 }
+

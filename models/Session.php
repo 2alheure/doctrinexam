@@ -8,7 +8,7 @@
 class Session
 {
     /**
-     * @var int
+     * @var integer
      */
     private $id;
 
@@ -18,7 +18,7 @@ class Session
     private $debut;
 
     /**
-     * @var float
+     * @var integer
      */
     private $duree;
 
@@ -46,9 +46,9 @@ class Session
     }
 
     /**
-     * Get id.
+     * Get id
      *
-     * @return int
+     * @return integer
      */
     public function getId()
     {
@@ -56,7 +56,7 @@ class Session
     }
 
     /**
-     * Set debut.
+     * Set debut
      *
      * @param \DateTime $debut
      *
@@ -70,7 +70,7 @@ class Session
     }
 
     /**
-     * Get debut.
+     * Get debut
      *
      * @return \DateTime
      */
@@ -80,9 +80,9 @@ class Session
     }
 
     /**
-     * Set duree.
+     * Set duree
      *
-     * @param float $duree
+     * @param integer $duree
      *
      * @return Session
      */
@@ -94,9 +94,9 @@ class Session
     }
 
     /**
-     * Get duree.
+     * Get duree
      *
-     * @return float
+     * @return integer
      */
     public function getDuree()
     {
@@ -104,9 +104,9 @@ class Session
     }
 
     /**
-     * Set idSalle.
+     * Set idSalle
      *
-     * @param \Salle|null $idSalle
+     * @param \Salle $idSalle
      *
      * @return Session
      */
@@ -118,9 +118,9 @@ class Session
     }
 
     /**
-     * Get idSalle.
+     * Get idSalle
      *
-     * @return \Salle|null
+     * @return \Salle
      */
     public function getIdSalle()
     {
@@ -128,9 +128,9 @@ class Session
     }
 
     /**
-     * Set idMatiere.
+     * Set idMatiere
      *
-     * @param \Matiere|null $idMatiere
+     * @param \Matiere $idMatiere
      *
      * @return Session
      */
@@ -142,9 +142,9 @@ class Session
     }
 
     /**
-     * Get idMatiere.
+     * Get idMatiere
      *
-     * @return \Matiere|null
+     * @return \Matiere
      */
     public function getIdMatiere()
     {
@@ -152,7 +152,7 @@ class Session
     }
 
     /**
-     * Add idProf.
+     * Add idProf
      *
      * @param \Prof $idProf
      *
@@ -166,19 +166,17 @@ class Session
     }
 
     /**
-     * Remove idProf.
+     * Remove idProf
      *
      * @param \Prof $idProf
-     *
-     * @return boolean TRUE if this collection contained the specified element, FALSE otherwise.
      */
     public function removeIdProf(\Prof $idProf)
     {
-        return $this->idProf->removeElement($idProf);
+        $this->idProf->removeElement($idProf);
     }
 
     /**
-     * Get idProf.
+     * Get idProf
      *
      * @return \Doctrine\Common\Collections\Collection
      */
@@ -187,3 +185,4 @@ class Session
         return $this->idProf;
     }
 }
+

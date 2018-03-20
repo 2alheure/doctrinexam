@@ -8,7 +8,7 @@
 class Employe
 {
     /**
-     * @var int
+     * @var integer
      */
     private $id;
 
@@ -29,9 +29,9 @@ class Employe
 
 
     /**
-     * Get id.
+     * Get id
      *
-     * @return int
+     * @return integer
      */
     public function getId()
     {
@@ -39,7 +39,7 @@ class Employe
     }
 
     /**
-     * Set nom.
+     * Set nom
      *
      * @param string $nom
      *
@@ -53,7 +53,7 @@ class Employe
     }
 
     /**
-     * Get nom.
+     * Get nom
      *
      * @return string
      */
@@ -63,7 +63,7 @@ class Employe
     }
 
     /**
-     * Set prenom.
+     * Set prenom
      *
      * @param string $prenom
      *
@@ -77,7 +77,7 @@ class Employe
     }
 
     /**
-     * Get prenom.
+     * Get prenom
      *
      * @return string
      */
@@ -87,9 +87,9 @@ class Employe
     }
 
     /**
-     * Set idEntreprise.
+     * Set idEntreprise
      *
-     * @param \Entreprise|null $idEntreprise
+     * @param \Entreprise $idEntreprise
      *
      * @return Employe
      */
@@ -101,12 +101,13 @@ class Employe
     }
 
     /**
-     * Get idEntreprise.
+     * Get idEntreprise
      *
-     * @return \Entreprise|null
+     * @return \Entreprise
      */
     public function getIdEntreprise()
     {
         return $this->idEntreprise;
     }
 }
+
