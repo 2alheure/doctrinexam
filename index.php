@@ -1,3 +1,1 @@
-<?php
-
-echo "test";
+<?php header('location: site/index.php');
