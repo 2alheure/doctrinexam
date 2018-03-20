@@ -47,4 +47,14 @@ Session:
                 id_matiere:
                     referencedColumnName: id
             orphanRemoval: false
+    manyToMany:
+        idProf:
+            targetEntity: Prof
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: idSession
+            inversedBy: null
+            joinTable: null
+            orderBy: null
+    repositoryClass: SessionRepository   
     lifecycleCallbacks: {  }
