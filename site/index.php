@@ -16,6 +16,14 @@ $matieres = $entityManager->getRepository('\Matiere')->findAll();
 </head>
 <body>
     <h1>Examen Doctrine</h1>
+    <p>
+        Groupe :
+        <ul>
+            <li>Florian RAMBUR</li>
+            <li>Jordan JUVENTIN</li>
+            <li>Vincent Bancquart (Absent)</li>
+        </ul>
+    </p>
     <section>
         <ul>
             <li><a href="setup.php">Générer des données dans la base.</a></li>
