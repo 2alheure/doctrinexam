@@ -16,6 +16,14 @@ $salaries = $entityManager->getRepository('\Employe')->findAll();
 </head>
 <body>
     <h1>Examen Doctrine</h1>
+    <p>
+        Groupe :
+        <ul>
+            <li>Florian RAMBUR</li>
+            <li>Jordan JUVENTIN</li>
+            <li>Vincent Bancquart (Absent)</li>
+        </ul>
+    </p>
     <section>
         <ul>
             <li><a href="setup.php">Générer des données dans la base.</a></li>
@@ -48,7 +56,7 @@ $salaries = $entityManager->getRepository('\Employe')->findAll();
             </li>
             <li>Lister les différentes configurations existantes d'une session avec, pour chacune, le nom du prof ayant créé cette configuration.</li>
             <li>Lister les salles dans lesquelles ont lieu toutes les sessions d'un même cours.</li>
-            <li>Lister les sessions affectées à des salles n'ayant pas un nombre suffisant de places pour accueillir les inscrits à cette session.</li>
+            <li><a href="sessTooMuch.php">Lister les sessions affectées à des salles n'ayant pas un nombre suffisant de places pour accueillir les inscrits à cette session.</a></li>
         </ul>
     </section>
 
