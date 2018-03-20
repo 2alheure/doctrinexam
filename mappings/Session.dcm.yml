@@ -56,4 +56,5 @@ Session:
             inversedBy: null
             joinTable: null
             orderBy: null
+    repositoryClass: SessionRepository   
     lifecycleCallbacks: {  }

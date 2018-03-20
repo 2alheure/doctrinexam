@@ -3,7 +3,7 @@
 require_once('../bootstrap.php');
 
 $salaries = $entityManager->getRepository('\Employe')->findAll();
-
+$matieres = $entityManager->getRepository('\Matiere')->findAll();
 ?>
 
 <!DOCTYPE html>
@@ -47,7 +47,19 @@ $salaries = $entityManager->getRepository('\Employe')->findAll();
                 <a class="salaryAverage" href="salaryAverage.php">Moyenne des notes d'un salarié</a>
             </li>
             <li>Lister les différentes configurations existantes d'une session avec, pour chacune, le nom du prof ayant créé cette configuration.</li>
-            <li>Lister les salles dans lesquelles ont lieu toutes les sessions d'un même cours.</li>
+            <li>
+                <select class="roomForSessionSelect">
+                    <option>Choisir un employé</option>
+                    <?php
+                        foreach($matieres as $matiere) {
+                            ?>
+                            <option value="<?php echo $matiere->getId(); ?>"><?php echo $matiere->getIntitule(); ?></option>
+                            <?php
+                        }
+                    ?>
+                </select>
+                <a class="roomForSession" href="roomForSession.php">Lister les salles dans lesquelles ont lieu toutes les sessions d'un même cours</a>
+            </li>
             <li>Lister les sessions affectées à des salles n'ayant pas un nombre suffisant de places pour accueillir les inscrits à cette session.</li>
         </ul>
     </section>
@@ -65,6 +77,11 @@ $salaries = $entityManager->getRepository('\Employe')->findAll();
         $('.salaryAverageSelect').on('change', function() {
             var val = $(this).find(":selected").val();
             $('.salaryAverage').attr('href', 'salaryAverage.php?id='+val);
+        });
+
+        $('.roomForSessionSelect').on('change', function() {
+            var val = $(this).find(":selected").val();
+            $('.roomForSession').attr('href', 'roomForSession.php?id='+val);
         });
     </script>
 </body>
