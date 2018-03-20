@@ -1,0 +1,44 @@
+Prof:
+    type: entity
+    table: prof
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: true
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        nom:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        prenom:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+    manyToMany:
+        idSession:
+            targetEntity: Session
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: idProf
+            joinTable:
+                name: enseignement
+                joinColumns:
+                    -
+                        name: id_prof
+                        referencedColumnName: id
+                inverseJoinColumns:
+                    -
+                        name: id_session
+                        referencedColumnName: id
+            orderBy: null
+    lifecycleCallbacks: {  }

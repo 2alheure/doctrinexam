@@ -1,0 +1,47 @@
+Assister:
+    type: entity
+    table: assister
+    indexes:
+        id_employe:
+            columns:
+                - id_employe
+        id_session:
+            columns:
+                - id_session
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: true
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        note:
+            type: float
+            nullable: false
+            precision: 10
+            scale: 0
+    manyToOne:
+        idEmploye:
+            targetEntity: Employe
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                id_employe:
+                    referencedColumnName: id
+            orphanRemoval: false
+        idSession:
+            targetEntity: Session
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                id_session:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }
