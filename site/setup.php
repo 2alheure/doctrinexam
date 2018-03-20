@@ -52,7 +52,7 @@ for ($i = 0 ; $i<20 ; $i++) {          // Génération salle
     $entityManager->flush();
 }
 
-for ($i = 0 ; $i<20 ; $i++) {          // Génération session
+for ($i = 0 ; $i<200 ; $i++) {          // Génération session
     $session = new Session();
     $session->setDebut($faker->dateTimeBetween('-1 year', '+2 years'));
     $session->setDuree($faker->numberBetween(45, 180));
@@ -64,18 +64,18 @@ for ($i = 0 ; $i<20 ; $i++) {          // Génération session
     $entityManager->flush();
 }
 
-/*for ($i = 0 ; $i<20 ; $i++) {          // Génération enseignement
+for ($i = 0 ; $i<100 ; $i++) {          // Génération enseignement
     $enseignement = new Enseignement();
-    $enseignement->setCompte_rendu($faker->text());
+    $enseignement->setCompteRendu($faker->text());
 
     $enseignement->setIdProf($entityManager->find('\Prof', $faker->numberBetween(1, $prof->getId()))); // $prof contient encore la dernière entité de type Prof qui a été persistée, donc on a le last_insert_id
     $enseignement->setIdSession($entityManager->find('\Session', $faker->numberBetween(1, $session->getId()))); // $session contient encore la dernière entité de type Session qui a été persistée, donc on a le last_insert_id
 
     $entityManager->persist($enseignement);
     $entityManager->flush();
-}*/
+}
 
-for ($i = 0 ; $i<20 ; $i++) {          // Génération assister
+for ($i = 0 ; $i<100 ; $i++) {          // Génération assister
     $assister = new Assister();
     $assister->setNote($faker->numberBetween(0, 20));
 

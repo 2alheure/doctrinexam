@@ -125,10 +125,11 @@ COMMIT;
 
 DROP TABLE IF EXISTS `enseignement`;
 CREATE TABLE IF NOT EXISTS `enseignement` (
+  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   `id_prof` int(10) UNSIGNED NOT NULL,
   `id_session` int(10) UNSIGNED NOT NULL,
   `compte_rendu` text COLLATE utf8_bin NOT NULL,
-  PRIMARY KEY (`id_prof`,`id_session`),
+  PRIMARY KEY (`id`),
   FOREIGN KEY (`id_session`) REFERENCES `session`(`id`),
   FOREIGN KEY (`id_prof`) REFERENCES `prof`(`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
