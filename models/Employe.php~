@@ -3,9 +3,9 @@
 
 
 /**
- * Prof
+ * Employe
  */
-class Prof
+class Employe
 {
     /**
      * @var integer
@@ -21,6 +21,11 @@ class Prof
      * @var string
      */
     private $prenom;
+
+    /**
+     * @var \Entreprise
+     */
+    private $idEntreprise;
 
 
     /**
@@ -38,7 +43,7 @@ class Prof
      *
      * @param string $nom
      *
-     * @return Prof
+     * @return Employe
      */
     public function setNom($nom)
     {
@@ -62,7 +67,7 @@ class Prof
      *
      * @param string $prenom
      *
-     * @return Prof
+     * @return Employe
      */
     public function setPrenom($prenom)
     {
@@ -80,50 +85,29 @@ class Prof
     {
         return $this->prenom;
     }
-    /**
-     * @var \Doctrine\Common\Collections\Collection
-     */
-    private $idSession;
 
     /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->idSession = new \Doctrine\Common\Collections\ArrayCollection();
-    }
-
-    /**
-     * Add idSession
+     * Set idEntreprise
      *
-     * @param \Session $idSession
+     * @param \Entreprise $idEntreprise
      *
-     * @return Prof
+     * @return Employe
      */
-    public function addIdSession(\Session $idSession)
+    public function setIdEntreprise(\Entreprise $idEntreprise = null)
     {
-        $this->idSession[] = $idSession;
+        $this->idEntreprise = $idEntreprise;
 
         return $this;
     }
 
     /**
-     * Remove idSession
+     * Get idEntreprise
      *
-     * @param \Session $idSession
+     * @return \Entreprise
      */
-    public function removeIdSession(\Session $idSession)
+    public function getIdEntreprise()
     {
-        $this->idSession->removeElement($idSession);
-    }
-
-    /**
-     * Get idSession
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getIdSession()
-    {
-        return $this->idSession;
+        return $this->idEntreprise;
     }
 }
+

@@ -32,4 +32,5 @@ Matiere:
                 id_prof:
                     referencedColumnName: id
             orphanRemoval: false
+    repositoryClass: MatiereRepository   
     lifecycleCallbacks: {  }

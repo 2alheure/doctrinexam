@@ -12,4 +12,17 @@ class SessionRepository extends Doctrine\ORM\EntityRepository
     {
         return $this->_em->createQuery("select s from \Session s where s.idMatiere = ".$idMatiere)->getResult();
     }
+
+    public function getDifferentConfig()
+    {
+        $query = "SELECT p.nom, p.prenom
+                  FROM Enseignement e
+                  JOIN e.idSession s
+                  JOIN s.idMatiere m
+                  JOIN m.idProf pp
+                  JOIN e.idProf p
+                  WHERE p.id <> pp.id";
+
+        return $this->_em->createQuery($query)->getResult();
+    }
 }

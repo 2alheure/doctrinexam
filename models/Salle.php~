@@ -110,3 +110,4 @@ class Salle
         return $this->places;
     }
 }
+

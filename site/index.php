@@ -62,6 +62,18 @@ $matieres = $entityManager->getRepository('\Matiere')->findAll();
             </li>
             <li>Lister les sessions affectées à des salles n'ayant pas un nombre suffisant de places pour accueillir les inscrits à cette session.</li>
         </ul>
+
+        <h3>Query Builder :</h3>
+        <input name="search" class="search" type="search">
+        <a class="searchMatiere" href="searchMatiere.php">Chercher des matières</a>
+
+        <?php
+
+        $prof = $entityManager->getRepository('\Session')->getDifferentConfig();
+        var_dump($prof);
+        
+?>
+
     </section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -82,6 +94,11 @@ $matieres = $entityManager->getRepository('\Matiere')->findAll();
         $('.roomForSessionSelect').on('change', function() {
             var val = $(this).find(":selected").val();
             $('.roomForSession').attr('href', 'roomForSession.php?id='+val);
+        });
+
+        $('.search').on('keyup', function() {
+            var val = $(this).val();
+            $('.searchMatiere').attr('href', 'searchMatiere.php?q='+val);
         });
     </script>
 </body>

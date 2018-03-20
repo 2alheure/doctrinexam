@@ -22,10 +22,10 @@ Session:
             type: datetime
             nullable: false
         duree:
-            type: smallint
+            type: float
             nullable: false
-            options:
-                unsigned: false
+            precision: 10
+            scale: 0
     manyToOne:
         idSalle:
             targetEntity: Salle
@@ -56,5 +56,5 @@ Session:
             inversedBy: null
             joinTable: null
             orderBy: null
-    repositoryClass: SessionRepository   
+    repositoryClass: SessionRepository    
     lifecycleCallbacks: {  }

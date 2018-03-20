@@ -44,4 +44,5 @@ Assister:
                 id_session:
                     referencedColumnName: id
             orphanRemoval: false
+    repositoryClass: AssisterRepository
     lifecycleCallbacks: {  }

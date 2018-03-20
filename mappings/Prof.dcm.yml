@@ -23,4 +23,22 @@ Prof:
             length: 255
             options:
                 fixed: false
+    manyToMany:
+        idSession:
+            targetEntity: Session
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: idProf
+            joinTable:
+                name: enseignement
+                joinColumns:
+                    -
+                        name: id_prof
+                        referencedColumnName: id
+                inverseJoinColumns:
+                    -
+                        name: id_session
+                        referencedColumnName: id
+            orderBy: null
     lifecycleCallbacks: {  }

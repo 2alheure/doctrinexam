@@ -15,11 +15,7 @@ if($sessions) {
     }
     
     $moyenne = $notes / sizeof($sessions);
+    echo 'La moyenne de ce salarié est <b>'.$moyenne.'</b>';
+} else {
+    echo 'Pas de note';
 }
-
-
-
-
-?>
-
-La moyenne de ce salarié est <b><?php echo $moyenne; ?></b>
