@@ -110,3 +110,4 @@ class Assister
         return $this->idSession;
     }
 }
+

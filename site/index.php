@@ -75,13 +75,6 @@ $matieres = $entityManager->getRepository('\Matiere')->findAll();
         <input name="search" class="search" type="search">
         <a class="searchMatiere" href="searchMatiere.php">Chercher des matières</a>
 
-        <?php
-
-        $prof = $entityManager->getRepository('\Session')->getDifferentConfig();
-        var_dump($prof);
-        
-?>
-
     </section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

@@ -1,13 +1,13 @@
-Session:
+Enseignement:
     type: entity
-    table: session
+    table: enseignement
     indexes:
-        id_salle:
+        id_session:
             columns:
-                - id_salle
-        id_matiere:
+                - id_session
+        id_prof:
             columns:
-                - id_matiere
+                - id_prof
     id:
         id:
             type: integer
@@ -18,34 +18,32 @@ Session:
             generator:
                 strategy: IDENTITY
     fields:
-        debut:
-            type: datetime
+        compteRendu:
+            type: text
             nullable: false
-        duree:
-            type: smallint
-            nullable: false
+            length: 65535
             options:
-                unsigned: false
+                fixed: false
+            column: compte_rendu
     manyToOne:
-        idSalle:
-            targetEntity: Salle
+        idSession:
+            targetEntity: Session
             cascade: {  }
             fetch: LAZY
             mappedBy: null
             inversedBy: null
             joinColumns:
-                id_salle:
+                id_session:
                     referencedColumnName: id
             orphanRemoval: false
-        idMatiere:
-            targetEntity: Matiere
+        idProf:
+            targetEntity: Prof
             cascade: {  }
             fetch: LAZY
             mappedBy: null
             inversedBy: null
             joinColumns:
-                id_matiere:
+                id_prof:
                     referencedColumnName: id
             orphanRemoval: false
-    repositoryClass: SessionRepository
     lifecycleCallbacks: {  }

@@ -15,7 +15,7 @@ class SessionRepository extends Doctrine\ORM\EntityRepository
 
     public function getDifferentConfig()
     {
-        $query = "SELECT p.nom, p.prenom
+        $query = "SELECT p.nom, p.prenom, s.debut, s.duree
                   FROM Enseignement e
                   JOIN e.idSession s
                   JOIN s.idMatiere m

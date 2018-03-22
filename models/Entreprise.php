@@ -52,3 +52,4 @@ class Entreprise
         return $this->nom;
     }
 }
+

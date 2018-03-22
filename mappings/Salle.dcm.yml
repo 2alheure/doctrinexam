@@ -15,7 +15,7 @@ Salle:
             type: smallint
             nullable: false
             options:
-                unsigned: false
+                unsigned: true
         lieu:
             type: string
             nullable: false
@@ -26,5 +26,5 @@ Salle:
             type: smallint
             nullable: false
             options:
-                unsigned: false
+                unsigned: true
     lifecycleCallbacks: {  }
