@@ -16,24 +16,24 @@ class AssisterRepository extends Doctrine\ORM\EntityRepository
             ->from('Assister', 'ass')
             ->join('ass.idSession', 'sess')
             ->join('sess.idSalle', 'sall')
-            ->where(':count > :places')
-            ->setParameter('count', 'COUNT(ass.idEmploye)')
-            ->setParameter('places', 'sall.places')
-            ->groupBy('ass.idSession');
+            ->groupBy('ass.idSession')
+            ->addGroupBy('sall.places')
+            ->having('COUNT(ass.idEmploye) > sall.places');
 
             $query = $queryBuilder->getQuery();
+            $results = $query->getSQL();
             $results = $query->getResult();
 
             return $results;
 
 
-        // $query = "SELECT COUNT(ass.idEmploye) as cass, ass.idSession
-        //           FROM \Assister ass
-        //           JOIN ass.idSession sess
-        //           JOIN sess.idSalle sall
-        //           WHERE cass > sall.places
-        //           GROUP BY ass.idSession";
+        $query = "SELECT ass.idSession
+                  FROM \Assister ass
+                  JOIN ass.idSession sess
+                  JOIN sess.idSalle sall
+                  GROUP BY sall.places, ass.idSession
+                  HAVING COUNT(ass.idEmploye) > sall.places";
 
-        // return $this->_em->createQuery($query)->getResult();
+        return $this->_em->createQuery($query)->getResult();
     }
 }

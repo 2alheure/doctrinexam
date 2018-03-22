@@ -7,8 +7,8 @@ $salary = $entityManager->find('\Employe', $idSalary);
 
 $sessions = $entityManager->getRepository('\Assister')->findBy(array('idEmploye' => $salary));
 
-$notes = '';
-$moyenne = '';
+$notes = 0;
+$moyenne = 0;
 if($sessions) {
     foreach($sessions as $session) {
         $notes += $session->getNote();
