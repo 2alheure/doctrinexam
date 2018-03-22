@@ -54,7 +54,7 @@ $matieres = $entityManager->getRepository('\Matiere')->findAll();
                 </select>
                 <a class="salaryAverage" href="salaryAverage.php">Moyenne des notes d'un salarié</a>
             </li>
-            <li>Lister les différentes configurations existantes d'une session avec, pour chacune, le nom du prof ayant créé cette configuration.</li>
+            <li><a href="getDifferentConfig.php">Lister les différentes configurations existantes d'une session avec, pour chacune, le nom du prof ayant créé cette configuration.</a></li>
             <li>
                 <select class="roomForSessionSelect">
                     <option>Choisir un employé</option>
